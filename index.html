@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; 
+            color: #1e1e2f; 
+            line-height: 1.6;
+        }
+        .container {
+            background-color: #64a39c;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "intro intro"
+                "skills projects"
+                "experience experience"
+                "social social"
+                "contact contact";
+            gap: 20px;
+        }
+        header {
+            grid-area: header;
+            background-color: #003087;
+            color: #f0f8ff;
+            padding: 20px;
+            text-align: center;
+        }
+        .intro {
+            grid-area: intro;
+            display: flex;
+            align-items: center;
+            background-color: #80d0c7;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .intro img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .skills {
+            grid-area: skills;
+            background-color: #00a1d6; 
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .projects {
+            grid-area: projects;
+            background-color: #80d0c7; 
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .experience {
+            grid-area: experience;
+            background-color: #f0f8ff; 
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .social {
+            grid-area: social;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .social button {
+            background-color: #003087;
+            color: #f0f8ff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .social button img{
+            
+            width: 80px;
+            height: 80px;
+        }
+        .social button:hover {
+            background-color: #00a1d6;
+        }
+        .social .linkedin::before {
+            content: "\f08c"; 
+            font-family: "Font Awesome 5 Free";
+            margin-right: 5px;
+        }
+        .social .github::before {
+            content: "\f09b"; 
+            font-family: "Font Awesome 5 Free";
+            margin-right: 5px;
+        }
+        .contact {
+            grid-area: contact;
+            background-color: #ffbf70;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1, h2 {
+            color: #ffbf70;;
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: none;
+        }
+        ul li {
+            margin: 5px 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #003087;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            background-color: #003087;
+            color: #f0f8ff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #00a1d6;
+        }
+        a {
+            color: #ffbf70;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                grid-template-areas:
+                    "header"
+                    "intro"
+                    "skills"
+                    "projects"
+                    "experience"
+                    "social"
+                    "contact";
+            }
+            .intro {
+                flex-direction: column;
+                text-align: center;
+            }
+            .intro img {
+                margin-right: 0;
+                margin-bottom: 20px;
+
+            }
+            .social {
+                flex-direction: column;
+            }
+          
+
+            .social button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Meu Portfólio</h1>
+        </header>
+        <section class="intro">
+            <img src="Luiz Carlos.jpg" alt="Foto">
+            <div>
+                <h2>Sobre Mim</h2>
+                <p>Sou um profissional em transição de carreira para Desenvolvedor Júnior, com diversas experiências adquiridas em outras áreas que me deram várias habilidades para entender o cliente e projetar a melhor solução com as melhores tecnologias disponíveis no mercado e com custo baixo. Trabalhei em áreas de educação, logística, áreas públicas, financeiro e tecnológico. Apaixonado por web e app development!</p>
+            </div>
+        </section>
+        <section class="skills">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>Python e Flet</li>
+                <li>APIs (Google Maps)</li>
+                <li>Resolução de Problemas</li>
+            </ul>
+        </section>
+        <section class="projects">
+            <h2>Projetos</h2>
+            <ul>
+                <li>Loja de Acessórios</li>
+                <li>Cadastro de Assistência Técnica</li>
+                <li>Landing Page de Finanças</li>
+                <li>Planejamento de Rotas para Viagem</li>
+            </ul>
+        </section>
+        <section class="experience">
+            <h2>Experiências</h2>
+            <ul>
+                <li>Monitor de Linguagem C</li>
+                <li>Estágio em Engenharia de Produção</li>
+                <li>Consultor Financeiro</li>
+                <li>Motorista de Veículos Leves</li>
+                <li>Manutenção de Computadores e Celulares</li>
+            </ul>
+        </section>
+        <section class="social">
+            <button><a href="https://www.linkedin.com/in/luiz-carlos-j%C3%BAnior-94abaa8a/"></a><img src="Linkedin.png" alt=""></button>
+            <button><a href="http://https://github.com/L0W1Z"></a><img src="Github.png" alt=""></button>
+        </section>
+        <section class="contact">
+            <h3>Contato</h3>
+            <form>
+                <input type="text" placeholder="Nome" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Mensagem" rows="4" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
